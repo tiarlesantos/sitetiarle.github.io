@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* Estilos para o corpo da página */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
+        /* Estilos para o cabeçalho */
         .header {
             background-color: #333;
             color: #fff;
@@ -23,10 +25,12 @@
             margin: 0;
             font-size: 1.6em;
         }
+        /* Estilos para o conteúdo principal */
         .content {
             margin-top: 10px;
             padding: 100px;
         }
+        /* Estilos para o menu de navegação */
         .menu {
             float: right;
             margin-right: 100px;
@@ -41,17 +45,58 @@
             margin-left: 30px;
         }
         .menu ul li a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
             font-size: 1.2em;
         }
         .menu ul li a:hover {
-            color: #f0f0f0;
+            color: #06f0bd;
+        }
+        /* Estilos para o container do formulário de contato */
+        .container {
+            max-width: 600px;
+            margin: 100px 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Estilos para os grupos de formulários */
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        /* Estilos para o botão de envio do formulário */
+        .form-group button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #4cae4c;
         }
     </style>
-
 </head>
 <body>
+    <!-- Cabeçalho da página com o menu de navegação -->
     <div class="header">
         <div class="menu">
             <ul>
@@ -61,15 +106,33 @@
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </div>
-        
     </div>
     
-    <div class="content">
-        <h2>Contato</h2>
-        <p>Sou um profissional de TI com mais de [X] anos de experiência em [especificar áreas relevantes, como desenvolvimento de software, administração de sistemas, segurança da informação, etc.]. Tenho um sólido conhecimento em [tecnologias específicas relevantes para a vaga], demonstrando habilidades robustas em resolver problemas complexos e encontrar soluções inovadoras para desafios técnicos. Sou apaixonado por tecnologia e estou sempre atualizado com as últimas tendências do setor, buscando aplicar esse conhecimento para impulsionar a eficiência e a inovação nos projetos em que me envolvo.</p>
-        <p>Além de minhas habilidades técnicas, possuo forte capacidade de colaborar efetivamente em equipes multifuncionais, comunicando ideias de maneira clara e eficaz. Sou conhecido por minha dedicação em alcançar resultados de alta qualidade dentro dos prazos estabelecidos. Tenho experiência em liderar projetos e também em apoiar o desenvolvimento profissional de colegas de equipe, promovendo um ambiente de trabalho colaborativo e produtivo.</p>
-
-        <p>Estou entusiasmado com a possibilidade de trazer minha experiência e paixão pela tecnologia para [nome da empresa], contribuindo para o sucesso da equipe e ajudando a alcançar os objetivos estratégicos da organização.</p>
+    <!-- Container para o formulário de contato -->
+    <div class="container">
+        <h1>Contato</h1>
+        <!-- Formulário de contato -->
+        <form action="mailto:seu-email@exemplo.com" method="post" enctype="text/plain">
+            <!-- Campo para o nome -->
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <!-- Campo para o e-mail -->
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <!-- Campo para a mensagem -->
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <!-- Botão para enviar o formulário -->
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
     </div>
 </body>
 </html>
